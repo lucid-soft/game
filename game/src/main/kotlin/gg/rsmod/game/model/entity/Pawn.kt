@@ -287,7 +287,7 @@ abstract class Pawn(
             val key = entry.key
             val time = entry.value
 
-            if (time <= 1 && !key.tickForward) {
+            if (time <= 0 && !key.tickForward) {
                 if (key == RESET_PAWN_FACING_TIMER) {
                     resetFacePawn()
                 } else {
