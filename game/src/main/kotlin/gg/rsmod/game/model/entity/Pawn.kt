@@ -293,12 +293,12 @@ abstract class Pawn(
                 } else {
                     world.plugins.executeTimer(this, key)
                 }
-                if (!timers.has(key) && key.removeOnZero) {
-                    iterator.remove()
-                }
-            } else {
-                val updatedTime = if (key.tickForward) time + 1 else time - 1
-                entry.setValue(updatedTime)
+            }
+
+            val updatedTime = if (key.tickForward) time + 1 else time - 1
+            entry.setValue(updatedTime)
+            if (updatedTime == 0 && timers.has(key) && key.removeOnZero) {
+                iterator.remove()
             }
         }
     }
