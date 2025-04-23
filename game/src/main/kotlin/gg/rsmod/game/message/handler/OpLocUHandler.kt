@@ -81,7 +81,7 @@ class OpLocUHandler : MessageHandler<OpLocUMessage> {
         )
 
         client.closeInterfaceModal()
-        client.fullInterruption(movement = true, interactions = true, animations = true, queue = true)
+        //client.fullInterruption(movement = true, interactions = true, animations = true, queue = true)
 
         client.attr[INTERACTING_ITEM] = WeakReference(item)
         client.attr[INTERACTING_OBJ_ATTR] = WeakReference(obj)

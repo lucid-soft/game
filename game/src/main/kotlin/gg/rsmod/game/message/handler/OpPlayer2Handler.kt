@@ -36,7 +36,7 @@ class OpPlayer2Handler : MessageHandler<OpPlayer2Message> {
         log(client, "Player option: name=%s, opt=%d", other.username, option)
 
         client.closeInterfaceModal()
-        client.fullInterruption(movement = true, interactions = true, queue = true)
+        //client.fullInterruption(movement = true, interactions = true, queue = true)
 
         client.attr[INTERACTING_PLAYER_ATTR] = WeakReference(other)
         client.attr[INTERACTING_OPT_ATTR] = option

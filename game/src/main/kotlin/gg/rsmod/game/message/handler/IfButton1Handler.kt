@@ -148,7 +148,7 @@ class IfButton1Handler : MessageHandler<IfButtonMessage> {
                 return
             }
 
-            client.fullInterruption(movement = false, interactions = true, animations = false, queue = true)
+            //client.fullInterruption(movement = false, interactions = true, animations = false, queue = true)
 
             val handled = world.plugins.executeItem(client, item.id, option)
 
@@ -195,7 +195,7 @@ class IfButton1Handler : MessageHandler<IfButtonMessage> {
             client.attr[INTERACTING_ITEM_ID] = item.id
             client.attr[INTERACTING_ITEM_SLOT] = slot
 
-            client.fullInterruption(interactions = true, queue = true)
+            //client.fullInterruption(interactions = true, queue = true)
 
             if (world.plugins.canDropItem(client, item.id)) {
                 val remove = client.inventory.remove(item, assureFullRemoval = false, beginSlot = slot)

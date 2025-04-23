@@ -60,7 +60,7 @@ class ClickMapHandler : MessageHandler<MoveGameClickMessage> {
             return
         }
         client.closeInterfaceModal()
-        client.fullInterruption(movement = true, interactions = true, animations = false, queue = true)
+        //client.fullInterruption(movement = true, interactions = true, animations = false, queue = true)
 
         /**
          * Normal movement

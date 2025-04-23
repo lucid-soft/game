@@ -24,6 +24,8 @@ abstract class QueueTaskSet {
         block: suspend QueueTask.(CoroutineScope) -> Unit,
         lock: Boolean = false,
     ) {
+
+
         val task = QueueTask(ctx, priority)
         val suspendBlock = suspend { block(task, CoroutineScope(dispatcher)) }
 

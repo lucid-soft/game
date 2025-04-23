@@ -24,11 +24,14 @@ class PawnQueueTaskSet : QueueTaskSet() {
         if (strongOrSoft != null) {
             removeWeakTasks()
         }
-
+        var tasksDone = 0
         val iterator = queue.iterator()
         while (iterator.hasNext()) {
             val task = iterator.next()
-
+            tasksDone++
+            if (task.ctx is Player) {
+                task.ctx.writeMessage("Tasks done " + tasksDone)
+            }
             if (task.priority == TaskPriority.STANDARD && task.ctx is Player && task.ctx.hasMenuOpen()) {
                 val nonStandardTask = queue.firstOrNull { q -> q.priority != TaskPriority.STANDARD }
                 if (nonStandardTask != null) {

@@ -34,7 +34,7 @@ class OpPlayerTHandler : MessageHandler<OpPlayerTMessage> {
         }
 
         client.closeInterfaceModal()
-        client.fullInterruption(movement = true, interactions = true, queue = true)
+        //client.fullInterruption(movement = true, interactions = true, queue = true)
 
         client.attr[INTERACTING_PLAYER_ATTR] = WeakReference(player)
         client.attr[INTERACTING_COMPONENT_PARENT] = parent

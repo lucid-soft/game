@@ -31,7 +31,7 @@ class OpNpc2Handler : MessageHandler<OpNpc2Message> {
         }
 
         client.closeInterfaceModal()
-        client.fullInterruption(movement = true, interactions = true, queue = true)
+        //client.fullInterruption(movement = true, interactions = true, queue = true)
 
         client.attack(npc)
         npc.attr[LAST_HIT_ATTR] = WeakReference(client as Pawn)

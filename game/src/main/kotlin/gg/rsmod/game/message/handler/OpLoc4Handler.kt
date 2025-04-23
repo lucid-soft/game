@@ -59,7 +59,7 @@ class OpLoc4Handler : MessageHandler<OpLoc4Message> {
         )
 
         client.closeInterfaceModal()
-        client.fullInterruption(movement = true, interactions = true, animations = true, queue = true)
+        //client.fullInterruption(movement = true, interactions = true, animations = true, queue = true)
 
         if (message.movementType == 1 && world.privileges.isEligible(client.privilege, Privilege.ADMIN_POWER)) {
             val def = obj.getDef(world.definitions)
